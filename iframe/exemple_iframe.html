@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        html,body,main,iframe{
+            width: 100%;
+            height: 100%;
+        }
+        iframe{border:1px solid grey;}
+    </style>
+</head>
+<body>
+    <header><h1>Exemples iframe</h1></header>
+    <nav>
+            <p><a href="https://elpais.com" target="frame1">El País</a>
+            <a href="https://google.com" target="frame1">Google</a>
+            <a href="02_mostrar_en_iframe.html" target="frame1">Exemple Sandbox</a></p>
+            
+        </nav>
+    <main>
+        <iframe src="https://marca.com"name="frame1" frameborder="0" sandbox="allow-forms allow-top-navigation allow-same-origin"></iframe>    
+    </main>
+    
+</body>
+</html>

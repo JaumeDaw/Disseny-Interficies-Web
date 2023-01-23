@@ -1,0 +1,178 @@
+@charset "utf-8";
+
+/* ************************ */
+/* === INICIALITZACIÓNS === */
+/* ************************ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+/*  ******************** */
+/*  === VERSIÓ MOVIL === */
+/*  ******************** */
+
+:root {
+  font-family: Arial;
+  font-size: 10vw;
+}
+body {
+  width: 100%;
+  padding: 1rem;
+}
+header h1 {
+  text-align: center;
+  font-size: 1.5rem;
+}
+header img {
+  display: none;
+}
+nav ul {
+  list-style: none;
+}
+nav ul li a {
+  width: 100%;
+  display: block;
+  border: 1px solid red;
+  background-color: red;
+  color: white;
+  text-align: center;
+  border-radius: calc(1em / 3);
+  font-weight: bold;
+  margin: 0.5rem auto;
+  padding: 0.2rem 0;
+  transition: all ease 0.2s;
+}
+nav ul li a:hover {
+  background-color: white;
+  color: red;
+}
+nav ul li a:active {
+  background-color: white;
+  color: red;
+  box-shadow: inset 1px 1px 1px 1px black;
+}
+/* ************ */
+/* === TEXT === */
+/* ************ */
+section#texto {
+  text-align: justify;
+}
+section#texto p {
+  margin-top: 1em;
+}
+section#ventas article {
+  width: 100%;
+  border: 2px solid blue;
+  padding: 0.5rem 0;
+  text-align: center;
+  margin: 1em 0;
+}
+section#ventas article img {
+  width: 90%;
+  border: 1px solid red;
+}
+section#ventas article p {
+  color: blue;
+}
+section#ventas article p:nth-child(3) {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+section#ventas article {
+  padding: 0.3rem 0.6rem;
+}
+aside#tiempo{
+  display: none;
+}
+
+/* ********************* */
+/* === VERSIÓ TABLET === */
+/* ********************* */
+
+@media (min-width: 768px) {
+  :root {
+    font-size: 16px;
+  }
+  header h1 {
+    text-align: left;
+    color: blue;
+    font-size: 2rem;
+  }
+  header img {
+    display: block;
+  }
+  /* Botonera */
+  nav ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+  }
+  nav ul li a {
+    padding: 1rem 3rem;
+    border-radius: 2rem;
+  }
+
+  /* Text */
+  section#texto {
+    margin: 2rem 0;
+    column-count: 2;
+    column-gap: 2rem;
+    color:blue;
+  }
+  section#ventas {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+  }
+  section#ventas article {
+    width: 40%;
+  }
+}
+
+/* ************************ */
+/* === VERSIÓ ORDINADOR === */
+/* ************************ */
+
+@media (min-width:960px){
+  :root{
+    background-color: grey;
+  }
+  body{
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    box-shadow: 0 0 1rem black;
+    background-color: white;
+  }
+  header h1{
+    display: inline-block;
+    font-size: 3rem;
+    color: green;
+  }
+  header img{
+    display: inline-block;
+  }
+  div#tabular{
+    display:flex;
+  }
+  nav{
+    flex:1;
+  }
+  main{
+    flex: 5;
+    padding: 0 2rem;
+  }
+  aside#tiempo{
+    display: block;
+    flex: 1;
+  }
+  nav ul li a {
+    min-width: 12rem;
+  }
+  section#ventas article {
+    width: 20%;
+  }
+}

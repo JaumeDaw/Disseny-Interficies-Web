@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link id="old" rel="stylesheet" href="./css/oldStyle.css">
+        <!-- <link id="modern" rel="stylesheet" href="./css/modernStyle.css"> -->
+        <title>Curriculum Jaume Bañuls Orovay</title>
+        <script type="text/javascript">
+			
+            function retro(){
+                document.getElementById('old').href = './css/oldStyle.css';
+            }
+
+            function moderno(){
+                document.getElementById('old').href = './css/modernStyle.css';
+            }
+        
+    </script>
+    </head>
+    <body>
+        <header>
+            <img src="./img/foto_perfil.jpeg" alt="foto perfil">
+            <h1>Jaume Bañuls Orovay</h1>
+        </header>
+        
+        <nav>
+            <h2>
+                <ul>
+                    <li><a href="#info">Información personal</a></li>
+                    <li><a href="#formacion">Titulaciones</a></li>
+                    <li><a href="#vidalab">Vida laboral</a></li>
+                    <li><a href="#otros">Otros</a></li>
+                </ul>
+            </h2>
+            
+        </nav>
+        
+        <main>
+            <section id="info">
+                <h3>Información personal</h3>
+                <dl>
+                    <dt>Correo</dt>
+                    <dd><a href="mailto:jaumebo95@gmail.com?subject=Curriculum">Jaumebo95@gmail.com</a></dd>
+                    <dt>Telefono</dt>
+                    <dd>610965472</dd>
+                    <dt>Dirección</dt>
+                    <dd>C/Racó nº18, Beniarjó, València, 46722</dd>
+                    <dt>Dia nacimiento</dt>
+                    <dd>18 junio de 1995</dd>
+                </dl>   
+            </section>
+            
+            <section id="formacion">
+                <h3>Formación</h3>
+                <ul>
+                    <li>Grado superior en Química ambiental. CIPFP Vicente Blasco Ibañez, València</li>
+                    <li>Grado superior de Técnico de laboratorio clínico y biomédico. IES Tirant lo Blanc, Gandia</li>
+                    <li>Bachillerato científico. IES Vall de la Safor, Vilallonga</li>
+                    <li>Idiomas</li>
+                    <li>
+                        <ul>
+                            <li>Francés A1. EOI Gandia</li>
+                            <li>Alemán A1. EOI Gandia</li>
+                            <li>Valenciano nivel superior, acreditado por la Junta Qualificadora</li>
+                            <li>Anglés B1, Cambridge</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+            
+            <section id="vidalab">
+                <h3>Vida laboral</h3>
+                <ul>
+                    <li>Prácticas de laboratorio en H2OCientific, en Londres (2018)</li>
+                    <li>Práctica de laboratorio en EDAR Gandia (2020)</li>
+                    <li>Toldos Mar, Beniflà (2020,2021)</li>
+                    <li>Peón mantenimento, Ayuntamiento Beniarjó (2022)</li>
+                </ul>
+            </section>
+            
+            <section id="otros">
+                <h3>Otros</h3>
+                <ul>
+                    <li>Carné de conducir</li>
+                    <li>Disponibilidad de movimento</li>
+                </ul>
+            </section>
+            
+            <section id="buttons">
+                <button type="submit" onclick="retro()" class="boton">Old</button>
+                <button type="submit" onclick="moderno()" class="boton">New</button>
+            </section>
+        </main>
+        
+        
+    </body;>
+</html>

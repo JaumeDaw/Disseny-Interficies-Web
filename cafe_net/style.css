@@ -1,0 +1,54 @@
+body{
+    background-color: #CCCC66;
+    color:brown;
+}
+#nav{
+    width: 1%;
+}
+nav>ul{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: brown solid 8px;
+    text-align: center;
+    border-radius:25px;
+    box-shadow: 5px 10px 8px #888888;
+}
+section#imgInicial{
+    margin-left: 30%;
+}    
+section h3{
+    font-style: italic;
+    color:brown;
+    border-bottom: solid 1px brown;
+}
+table#cultiu{
+    width: 70%;
+    height: 500px;
+}
+table{
+    text-align: left;
+}
+table#cultiu, table#cultiu td, table#cultiu th{
+    border: white 1px solid;
+    border-spacing: 0;
+    color:black;
+}
+h1,h2,#color{
+    color:brown;
+}
+hr{
+    color:brown;
+}
+h2{
+    border-bottom: 1px solid brown;
+}
+#contacto :is(td,th){
+    text-align: left;
+}
+table td#main{
+    width: 90%;
+    text-align: center;
+}
+.pa-carousel-widget{
+    margin-left: auto;
+    margin-right: auto;
+}

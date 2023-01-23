@@ -1,0 +1,96 @@
+-var tit="Busqueda de empleo Sol"
+-var imgs=["Oficina","Taller","Jardineria","Pintor"]
+include includes/mixins.pug
+doctype html
+html(lang=lenguaje)
+	include includes/head.pug
+	body(style="background-color:lightblue;")
+		h1(id="dalt") #{tit}
+		nav 
+			p 
+				a(href="#datos") Datos
+				label(for="") | 
+				a(href="#forma") Formación
+				label(for="") | 
+				a(href="#exp") Experiencia profesional 
+				label(for="") | 
+				a(href="#otros") Otros
+				label(for="") | 
+				a(href="#fotos") Fotos 
+
+		main
+			form(name="datos",method="get",action="",autocomplete="off")
+				fieldset(id=datos)
+					legend Datos Personales 
+					table 
+						tr 
+							th
+								label(for="nom") Nombre
+							td 
+								input(type="text",id="nom",name="nom",maxlength="100",autofocus,required,placeholder="Nombre completo")
+						tr 
+							th
+								label(for="sexe") Sexe
+							td
+								label(for="home") Hombre
+								input(type="radio",id="home",name="sexo" checked)
+								label(for="dona") Mujer
+								input(type="radio",id="done",name="sexo")
+						tr
+							th
+								label(for="edad") Edad 
+							td
+								input(type="number",id="edad",name="edad",min="16",max="99")
+						tr 
+							th
+								label(for="email") E-mail 
+							td
+								input(type="email",id="email",name="email",maxlength="50")
+						tr
+							th
+								label(for="vivienda") Vivienda
+							td 
+								input(type="text", name="vivienda",id="vivienda" )
+						tr 
+							th 
+								label(for="tlf") Telefono
+							td
+								input(type="tel", name="tlf", id="tlf" pattern="[6]{1}[0-9]{8}")
+				fieldset(id="forma")
+					legend Formación académica	
+					p
+						label(for="estudios") Nivel Estudios:
+							select(id="estudios",name="estudios")
+								option(value="eso") E.S.O 
+								option(value="bac") Bachiller
+								option(value="fp") FP
+								option(value="uni") Universidad
+				fieldset(id="exp")
+					legend Experiencia laboral 
+					p 
+						label(for="experiencia") Introduce un texto con tu experiencia:
+						input(type="text", name="experiencia", id="experiencia" size="50em")
+				fieldset(id="otros")
+					legend Otros 
+					p 
+						label(for="otros") Otros:
+						input(type="text", name="otros", id="otros")
+					p
+						label(for="foto") Foto: 
+						input(type="file", name="foto",id="foto")
+				br
+			button(type="submit") Enviar
+			br
+			br
+			section(id="fotos" style="text-align:center ;")
+				-for (var x=1;x<=4;x++)
+					+creaimg("./img/foto"+x+".jpg", "foto "+x)
+					label(for="img") #{imgs[x-1]} 
+						br
+						br
+			br
+			button
+				a(href="#dalt") Arriba
+	include includes/footer.pug
+	
+	

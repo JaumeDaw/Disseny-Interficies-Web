@@ -1,0 +1,33 @@
+main section div.carrousel{
+    width: 800px;
+    height: 500px;
+    border:5px solid black;
+    border-radius: 12px;
+    margin: 5rem auto;
+
+    background-size: 100% 100%;
+    
+    animation: carrousel 10s infinite alternate;
+    
+}
+
+@keyframes carrousel{
+    0%,30%{
+        background-image: url(../img/castillo_1.jpg);
+        opacity: 1;
+    }
+    31%,34%{
+        opacity: 0.5;
+    }
+    35%,65%{
+        background-image: url(../img/castillo_2.jpg);
+        opacity: 1;
+    }
+    66%,69%{
+        opacity: 0.5;
+    }
+    70%,100%{
+        opacity: 1;
+        background-image: url(../img/castillo_3.jpg);
+    }
+}

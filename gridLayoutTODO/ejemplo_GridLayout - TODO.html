@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Exemple Responsive amb Grid Layout</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type="text/css">
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+      }
+      /***************/
+      /* VISTA MÓVIL */
+      /***************/
+      :root {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 3vw;
+      }
+      h1 {
+        font-size: 1.5rem;
+        padding-left: 0.5rem;
+      }
+      h3 {
+        font-size: 1.1rem;
+      }
+      body {
+        width: 100%;
+        display: grid;
+        background-color: white;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "hd"
+          "mv"
+          "mn"
+          "ft";
+      }
+      header {
+        grid-area: hd;
+        background-color: red;
+      }
+      aside#logo {
+        grid-area: lg;
+        background-color: yellow;
+        display: none;
+      }
+      nav#mov {
+        grid-area: mv;
+        background-color: green;
+      }
+      nav#tab {
+        grid-area: ta;
+        background-color: pink;
+        display: none;
+      }
+      main {
+        grid-area: mn;
+        background-color: blue;
+        min-height: 10em;
+      }
+      footer {
+        grid-area: ft;
+        background-color: orange;
+      }
+      aside#banner {
+        grid-area: bn;
+        background-color: blueviolet;
+        display: none;
+      }
+
+      /****************/
+      /* VISTA TABLET */
+      /****************/
+      @media (min-width: 768px) {
+        :root{
+            font-size: 2vw;
+            background-color: gray;
+        } 
+        body{
+            margin: 0 auto;
+            width: 97%;
+            grid-template-columns: 3fr 1fr;
+            grid-template-areas:    "hd lg"
+                                    "mn ta"
+                                    "mn ta"
+                                    "ft ta";
+        }
+        main{
+            min-height: 94vh;
+        }
+        aside#logo{
+            display: block  ;
+        }
+        nav#tab{
+            display: block;
+        }
+        nav#mov{
+            display: none;
+        }
+      }
+
+      /****************/
+      /*  VISTA PC    */
+      /****************/
+      @media (min-width: 968px) {
+        :root{
+            font-size: 16px;
+            background-color: gray;
+        } 
+        body{
+            width: 95%;
+            grid-template-columns: 15rem 3fr 1fr;
+            grid-template-areas:    "lg hd hd"
+                                    "ta mn bn"
+                                    "ta mn bn"
+                                    "ft ft ft";
+        }
+        aside#banner {
+        display: block;
+      }
+
+
+
+
+
+
+
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Título</h1>
+    </header>
+    <aside id="logo">
+      <h3>Logo</h3>
+    </aside>
+    <nav id="mov">X</nav>
+    <nav id="tab">
+      <br />..inicio..<br />
+      ..contacta..
+    </nav>
+
+    <main>
+      <p>Sección principal</p>
+    </main>
+    <aside id="banner">
+      <p>Banners</p>
+    </aside>
+    <footer><p>copyright 2018</p></footer>
+  </body>
+</html>

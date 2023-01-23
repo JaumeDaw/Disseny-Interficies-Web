@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="author" content="J.Bañuls">
+  </head>
+  <body style="background-color:lightblue;">
+    <h1 id="dalt">Busqueda de empleo Sol</h1>
+    <nav> 
+      <p> <a href="#datos">Datos</a>
+        <label for="">| </label><a href="#forma">Formación</a>
+        <label for="">| </label><a href="#exp">Experiencia profesional </a>
+        <label for="">| </label><a href="#otros">Otros</a>
+        <label for="">| </label><a href="#fotos">Fotos </a>
+      </p>
+    </nav>
+    <main>
+      <form name="datos" method="get" action="procesa.php" autocomplete="off"></form>
+      <fieldset>
+        <legend>Datos Personales </legend>
+        <table> 
+          <tr> 
+            <th>
+              <label for="nom">Nombre</label>
+            </th>
+            <td> 
+              <input type="text" id="nom" name="nom" maxlength="100" autofocus required placeholder="Nombre completo">
+            </td>
+          </tr>
+          <tr> 
+            <th>
+              <label for="sexe">Sexe</label>
+            </th>
+            <td>
+              <label for="home">Hombre</label>
+              <input type="radio" id="home" name="sexo" checked>
+              <label for="dona">Mujer</label>
+              <input type="radio" id="done" name="sexo">
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <label for="edad">Edad </label>
+            </th>
+            <td>
+              <input type="number" id="edad" name="edad" min="16" max="99">
+            </td>
+          </tr>
+          <tr> 
+            <th>
+              <label for="email">E-mail </label>
+            </th>
+            <td>
+              <input type="email" id="email" name="email" maxlength="50" pattern="^w+@[a-zA-Z_]+?.[a-zA-Z]{2,3}$">
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <label for="vivienda">Vivienda</label>
+            </th>
+            <td> 
+              <input type="text" name="vivienda" id="vivienda">
+            </td>
+          </tr>
+          <tr> 
+            <th> 
+              <label for="tlf">Telefono</label>
+            </th>
+            <td>
+              <input type="tel" name="tlf" id="tlf" pattern="^([(]{1}[0-9]{3}[)]{1}[.| |-]{0,1}|^[0-9]{3}[.|-| ]?)?[0-9]{3}(.|-| )?[0-9]{4}$">
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+      <fieldset id="forma">
+        <legend>Formación académica	</legend>
+        <p>
+          <label for="estudios">Nivel Estudios:
+            <select id="estudios" name="estudios">
+              <option value="eso">E.S.O </option>
+              <option value="bac">Bachiller</option>
+              <option value="fp">FP</option>
+              <option value="uni">Universidad</option>
+            </select>
+          </label>
+        </p>
+      </fieldset>
+      <fieldset id="exp">
+        <legend>Experiencia laboral </legend>
+        <p> 
+          <label for="experiencia">Introduce un texto con tu experiencia:</label>
+          <input type="text" name="experiencia" id="experiencia" size="50em">
+        </p>
+      </fieldset>
+      <fieldset id="otros">
+        <legend>Otros </legend>
+        <p> 
+          <label for="otros">Otros:</label>
+          <input type="text" name="otros" id="otros">
+        </p>
+        <p>
+          <label for="foto">Foto: </label>
+          <input type="file" name="foto" id="foto">
+        </p>
+      </fieldset><br>
+      <button type="submit">Enviar</button><br><br>
+      <section id="fotos" style="text-align:center ;">
+        <div> <img src="./img/foto1.jpg" alt="foto 1" lenght="30%" width="30%"/></div>
+        <label for="img">Oficina <br><br></label>
+        <div> <img src="./img/foto2.jpg" alt="foto 2" lenght="30%" width="30%"/></div>
+        <label for="img">Taller <br><br></label>
+        <div> <img src="./img/foto3.jpg" alt="foto 3" lenght="30%" width="30%"/></div>
+        <label for="img">Jardineria <br><br></label>
+        <div> <img src="./img/foto4.jpg" alt="foto 4" lenght="30%" width="30%"/></div>
+        <label for="img">Pintor <br><br></label>
+      </section><br>
+      <button><a href="#dalt">Arriba</a></button>
+    </main>
+  </body>
+  <footer>
+    <p><small>Jaume Bañuls Orovay 2DAW Maria Enríquez copyright 2022</small></p>
+  </footer>
+</html>

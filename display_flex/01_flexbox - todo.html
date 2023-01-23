@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Ejemplo display: flex </title>
+<style type="text/css">
+    @charset "utf-8";
+    
+    *{
+        margin: 0px; padding: 0px; 
+        box-sizing: border-box; 
+    }
+    
+    :root{
+        background-color: grey;    
+    }
+    
+    body{ 
+        width: 90%;  
+        margin: 0 auto; 
+        background-color: white;
+    }
+    
+    h3{
+        margin-top: 1em;
+        margin-bottom: 0.5em;
+    }
+    .green{ background-color: lightgreen;  }
+    .orange{ background-color: orange;  }
+
+    /* Galeria de fotos */
+
+    main section#galeria1 div.flex{
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-evenly;
+      border:3px solid red;
+      width: 50%;
+    }
+    main section#galeria2 div.flex{
+      display: flex;
+      flex-flow: row-reverse nowrap;
+      justify-content: space-around;
+      border:3px solid red;
+      width: 50%;
+      overflow: auto;
+    }
+    main section#galeria3 div.flex{
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+      border:3px solid red;
+      height: 20rem;
+      align-items:center;
+    }
+    /* main section#galeria3 div.flex img[alt=queen"]{"
+      align-self: flex-start;}
+    main section#galeria3 div.flex img[alt="king"]{
+      order: -1;} 
+    main section#galeria3 div.flex img:hover{
+      align-self: flex-start; 
+    } */
+    main section#noticias1 div.flex{
+      display: flex;
+      flex-flow: row nowrap;
+    }
+    main section#noticias1 div.flex div.orange{
+      flex:6;
+      height: 10rem;
+    }
+    main section#noticias1 div.flex div.green{
+      flex:2;
+    }
+    
+</style>
+</head>
+<body>
+  <header>
+      <h1>Container Flex</h1>
+  </header>
+  <main>
+      <section id="galeria1">
+        <h3>Galeria 1: row wrap</h3>  
+        <div class="flex">
+            <img src="img/diamonds_10.gif" alt="ten"/>
+            <img src="img/diamonds_jack.gif" alt="jack"/>
+            <img src="img/diamonds_queen.gif" alt="queen"/>
+            <img src="img/diamonds_king.gif" alt="king"/>
+            <img src="img/diamonds_ace.gif" alt="as"/>
+        </div>  
+      </section>
+      <section id="galeria2">
+        <h3>Galeria 2: row-reverse nowrap overflow:auto</h3>  
+        <div class="flex">
+            <img src="img/diamonds_10.gif" alt="ten"/>
+            <img src="img/diamonds_jack.gif" alt="jack"/>
+            <img src="img/diamonds_queen.gif" alt="queen"/>
+            <img src="img/diamonds_king.gif" alt="king"/>
+            <img src="img/diamonds_ace.gif" alt="as"/>
+        </div>  
+      </section>
+      <section id="galeria3">
+        <h3>Galeria 3: height align-items</h3>  
+        <div class="flex">
+            <img src="img/diamonds_10.gif" alt="ten"/>
+            <img src="img/diamonds_jack.gif" alt="jack"/>
+            <img src="img/diamonds_queen.gif" alt="queen"/>
+            <img src="img/diamonds_king.gif" alt="king"/>
+            <img src="img/diamonds_ace.gif" alt="as"/>
+        </div>  
+      </section>
+      <section id="noticias1">
+        <h3>Noticias 1: flex-grow</h3>  
+        <div class="flex">
+            <div class="green">Noticia 1</div>
+            <div class="orange">Noticia 2</div>
+            <div class="green">Noticia 3</div>
+        </div>
+      </section>
+      <section id="noticias2">
+        <h3>Noticias 2: flex-shrink</h3>  
+        <div class="flex">
+            <div class="green">Noticia 1</div>
+            <div class="orange">Noticia 2</div>
+            <div class="green">Noticia 3</div>
+        </div>
+      </section>
+  </main>
+</body>

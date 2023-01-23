@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Overflow</title>
+    <style type="text/css">
+        *{  /* INICIALIZAMOS */
+            margin: 0; padding: 0;
+            text-decoration: none;
+            box-sizing: border-box; /* IMPORTANTE */
+            /* etc, etc */
+            
+        }
+    
+        :root{ /* FIJAMOS BGROUND, Y FUENTE BASE */
+            font-family: "Arial","Verdana",sans-serif;
+            font-size: 16px; /* ahora 1rem=16px */
+            background-color: grey;
+        }
+        
+        body{ /* CONTAINER PRIMARIO */
+            background-color: white;
+            width: 90%;
+            padding: 1rem;
+            margin: 0 auto; /* AUTOCENTRADO */
+        }
+        
+        div#capa1{
+            border: 5px solid blue;
+        }
+        
+        div#capa2{
+            border: 5px solid green;
+        }
+        
+        div#capa3{
+            border: 5px solid purple;
+        }
+        
+        
+    </style>
+    
+    
+</head>
+<body>
+    <header>
+        <h1>Position STATIC (por defecto donde caen)</h1>
+    </header>
+    <main>
+        <div id="capa1"></div>
+        <p>Texto de ejemplo</p>
+        <div id="capa2">
+            <div id="capa3">ss
+            </div>
+        </div>    
+        
+    </main>
+</body>

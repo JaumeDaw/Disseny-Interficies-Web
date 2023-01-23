@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="es">
+  <head>
+	<title>Ejemplo Form maquetado con CSS</title>
+	<meta charset="utf-8"/>
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+		@font-face {
+			font-family: "tranquila";
+			src: url(./ttf/tranquila.otf);
+		}
+		/*TO DO*/ 
+		*{
+			padding: 0;
+			margin: 0;
+			text-decoration: none;
+			box-sizing: border-box;
+			border: 1px dotted green;
+		}
+		:root{
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 16px;
+		}
+		body{
+			padding: 1rem;
+		}
+		form legend{
+			font-family: 'tranquila', Arial, sans-serif;
+			font-size: 2.5rem;
+			text-transform: uppercase;
+			color:darkblue;
+			letter-spacing: calc(1em/8);
+			text-align: center;
+		}
+		form fieldset{
+			margin: 2rem auto;
+			border: 0.8rem ridge gray;
+			border-radius: 2rem;
+		}
+		form fieldset p{
+			display: table-row;
+		}
+		form fieldset p>*{
+			display: table-cell;
+			padding: 0.2rem;
+			margin: 0.3rem, 0;
+		}
+			
+	</style>
+  </head>
+  <body>
+    <main>
+	  <form>	<!--TO DO -->
+    <!-- el enctype importante si usamos input type="file"-->
+
+	    <fieldset>
+		  <legend>Datos personales</legend>
+		  <!-- 1a linea -->
+		  <p>
+			<label for="nom">Nombre</label>
+			<input type="text" name="nombre" id="nom"  /> <!--TO DO -->
+		  </p>
+		  <!-- 2a linea -->
+		  <p>
+			<label for="pwd">Password</label>
+			<input type="password" name="pwd" id="pwd" />
+		  </p>	
+		  <!-- 3a linea -->
+		  <p>	
+			<label>Sexo:</label>
+				<span><input type="radio" name="sexo" id="home" /><!--TO DO -->
+					 <label for="home">Hombre</label>&nbsp;&nbsp;
+					 <input type="radio" name="sexo" id="dona"/>
+					 <label for="dona">Mujer</label> 
+				</span>
+		  </p>	
+		  <!-- 4a linea -->
+		  <p>	
+			<label>Carnet conducir:</label>
+				<span><input type="checkbox" name="carnet[]" id="cA"/>
+					 <label for="cA"> A </label>
+					 <input type="checkbox" name="carnet[]" id="cB"/>
+					 <label for="cB"> B </label>
+				</span>
+		  </p>
+		  <!-- 5a linea -->
+		  <p>	
+			<label for="foto">Foto</label>
+			<!--TO DO -->
+		  </p>
+		  <!-- 6a linea -->
+		  <p>
+			<label for="info">Otra información</label>
+			<textarea name="info" id="info" cols="70" rows="7"></textarea> 
+				<!--entre etiqueta de apertura y cerrado no poner nada que no se desee-->
+		  </p>
+		  <!-- 7a linea -->
+		  <p>	
+			<span></span>
+			<input type="button" value="Enviar"/>
+			<input type="reset" value="Borrar"/>
+		  </p>			
+	    </fieldset>	
+	  </form>	
+    </main>
+  </body>
+</html>

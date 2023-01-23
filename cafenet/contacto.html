@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">  
+
+    <title>Document</title>
+</head>
+<body>
+    <header><h1><img src=".\img\grano.gif" alt="icon">Contacto</h1><hr></header>
+    <main>
+        <p>
+            Si deseas ponerte en contacto con nosotros rellena este formulario y te contestaremos a la mayor brevedad posible
+        </p>
+    <form action="">
+        <table>
+            <tr>
+                <th>Nombre*</th>
+                <td><input type="text" name="nom" id="nom"></td>
+            </tr>
+            <tr>
+                <td>Apellidos</td>
+                <td><input type="text" name="cog" id="cog"></td>
+            </tr>
+            <tr>
+                <th>Correo Electrónico*</th>
+                <td><input type="text" name="email" id="email"></td>
+            </tr>
+        </table>
+        <p>¿Cuantas tazas de café tomas al dia?</p> 
+        <input type="radio" name="taza" id="1o2" value="1o2">
+        <label for="1o2">1 o 2 tazas</label> 
+        <input type="radio" name="taza" id="2-5" value="2-5">
+        <label for="2-5">2 - 5 tazas</label>
+        <input type="radio" name="taza" id="mas" value="mas">
+        <label for="mas">Mas de 5 tazas</label>
+        <p>¿Como te gusta preparar el café?</p>
+        <select name="cafe" id="cafe">
+            <option value="descafeinado">Descafeinado</option>
+            <option value="corto">Corto</option>
+            <option value="largo">Largo</option>
+            <option value="capuchino">Capuchino</option>
+            <option value="leche">Con leche</option>
+            <option value="bonbon">Bonbón</option>
+            <option value="carajillo">Carajillo</option>
+        </select>
+        <p>
+            <p>Comentario</p>
+            <textarea name="coment" id="coment" cols="30" rows="10"></textarea>
+        </p>
+         <p><input type="submit" value="Enviar"><input type="reset" value="Borrar"></p>
+    </form>
+</main>
+    
+    
+</body>
+</html>

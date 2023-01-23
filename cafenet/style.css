@@ -1,0 +1,30 @@
+body{
+    background-color: #CCCC66;
+}
+ul{
+    border: orangered solid 8px;
+    text-align: center;
+    border-radius:15px;
+    box-shadow: 5px 10px 8px #888888;
+}
+section h3{
+    font-style: italic;
+    color:orangered;
+    border-bottom: solid 1px orangered;
+}
+table{
+    text-align: left;
+}
+table#cultiu, table#cultiu td, table#cultiu th{
+    border: white 1px solid;
+    border-spacing: 0;
+}
+h1,h2{
+    color:orangered;
+}
+hr{
+    color:orangered;
+}
+h2{
+    border-bottom: 1px solid orangered;
+}

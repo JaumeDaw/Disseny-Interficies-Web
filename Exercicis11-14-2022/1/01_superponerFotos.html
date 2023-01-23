@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sobreposar fotos en absolute</title>
+    <style>
+      * {
+        border: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+      }
+      :root {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+      }
+      div#marco {
+        position: relative;
+      }
+      div#marco img#foto {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        filter: blur(1px) sepia(100%);
+      }
+      div#marco img#logo {
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
+        width: 4rem;
+        z-index: 1;
+        filter: drop-shadow(0 0 5px black);
+      }
+      main article{
+        column-count: 3;
+        column-rule: 2px solid rgba(128,128,128,70%);
+        text-align: justify;
+      }
+    </style>
+  </head>
+  <body>
+    <header><h1>Sobreposar fotos amb absolute</h1></header>
+    <main>
+      <article>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo laboriosam
+            in commodi! Blanditiis voluptates, perspiciatis beatae autem ab
+            perferendis corporis quia dolorum itaque reprehenderit at accusantium
+            iusto natus ratione laboriosam.
+        </p> 
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo laboriosam
+            in commodi! Blanditiis voluptates, perspiciatis beatae autem ab
+            perferendis corporis quia dolorum itaque reprehenderit at accusantium
+            iusto natus ratione laboriosam.
+        </p> 
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo laboriosam
+            in commodi! Blanditiis voluptates, perspiciatis beatae autem ab
+            perferendis corporis quia dolorum itaque reprehenderit at accusantium
+            iusto natus ratione laboriosam.
+        </p> 
+      </article>
+      <div id="marco">
+        <img id="logo" src="./img/sagrada_familia_256.png" alt="" />
+        <img id="foto" src="./img/familia1.jpg" alt="" />
+      </div>
+    </main>
+  </body>
+</html>

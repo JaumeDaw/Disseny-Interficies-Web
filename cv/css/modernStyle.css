@@ -1,0 +1,115 @@
+@font-face 
+{   font-family: 'bat';
+    src: url("../ttf/batmfa__.ttf") format('truetype');;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style: none;
+    text-align: center;
+    font-family: 'bat',Arial, Helvetica, sans-serif;
+}
+:root{
+    background-color: #000000;
+    background-image: url("/img/shattered.png");
+    background-attachment: fixed;
+    font-size: 16px;
+}
+body{
+    margin: 3em 10% 3em 10%;
+    background-color:azure;
+    border-radius: 5%;
+    padding: 2em;
+    position: relative;
+}
+header{
+    height: 15em;
+}
+header > img{
+    border:5px solid rgb(2, 158, 185);
+    border-radius: 6em;
+    width: 12em;
+    display: inline-block;
+    position:absolute;
+    right: 50%;
+    left:43%;
+    transition: 2s ease;
+}
+header h1{
+    display: inline-block;
+    position: absolute;
+    right: 30%;
+    left: 30%;
+    top: 9%;
+    color:transparent;
+    transition: 2s cubic-bezier(.33,1.91,1,1.57);
+}
+header:hover>img{
+    transform: translateX(-20em);
+}
+header:hover h1{
+    color:rgb(2, 158, 185);
+    transform: translateX(10em);
+}
+nav{
+    margin-top: 2em;
+    border: 3px solid rgb(2, 158, 185);
+    border-radius: 5em;
+}
+nav ul{
+    display: flex;
+    padding: 1%;
+    justify-content:space-around;
+}
+nav ul a:link{
+    color: rgb(2, 158, 185);
+}
+nav ul a:visited{
+    color: rgb(2, 20, 185);
+}
+main section{
+    font-size: 1.2em;
+    margin: 0 2em;
+    padding: 1.5em;
+}
+main section>h3{
+    color:rgb(2, 158, 185);
+    font-size: 2rem;
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+main section:nth-child(1) dt{
+    font-size: 1.5rem;
+}
+main section:nth-child(1) dd{
+    margin-bottom: 1rem;
+}
+main section:nth-child(1) dt+dd{
+    transform: scale(0,0);
+    transition: 0.3s ease;
+}
+main section:nth-child(1) dt:hover+dd{
+    transform: scale(1,1);
+}
+main section:nth-child(2) ul li{
+    font-size: 1.3rem;
+}main section:nth-child(2) ul li ul li{
+    font-size: 1rem;
+    margin-top: 0.3em;
+}
+main section#buttons button:nth-child(1){
+    box-shadow: 1px 1px 2px black;
+}
+main section#buttons{
+    display: flex;
+}
+main section button{
+    flex: 1 1 auto;
+    height: 5em;
+    font-size: 1em;
+    border-radius: 5em;
+    margin: 0 10px;
+}

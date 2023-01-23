@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sel·lectors bàsics</title>
+    <style type="text/css">
+        /*Selector universal*/
+        *{
+            margin: 0; padding: 0;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+        /*Selectors d'elements*/
+        html{/*Element Root: posem la font per defecte (que és heredable) i el tamany bàsic de la font*/
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+        }
+        body{
+            border: 1px solid red;
+            background-color: bisque;
+            padding: 1.5rem; /*això equival a 1,5 x 16px (que és el tamany fixat en el root)*/
+        }
+        h1{
+            font-size: 1.5rem;
+            letter-spacing: 0.3em; /*em fa referencia a la lletra actual*/ 
+            color: blue;
+            margin-bottom: 1em;
+        }
+        h3{
+            font-size: 1.2rem;
+            color:green;
+            margin-bottom: 1em;
+        }
+        p{
+            margin-bottom: 1em;
+        }
+        /*Selectors de classe*/
+        .bordeRojo{
+            border: 1px solid red;
+        }
+        strong.fondoAmarillo{/*Té més pes que fondoAmarillo asoles*/
+            background-color: orange;
+        }
+        .fondoAmarillo{
+            background-color: yellow;
+        }
+        /*Selectors d'id: El més específic*/
+        p#ultimPar{
+            border-bottom: 1px solid gray;
+        }
+        p:hover{
+            text-decoration: underline;
+        }
+        main *:hover{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="fondoAmarillo">Sel·lectors bàsics</h1>
+    </header>
+    <main>
+        <h3 class="bordeRojo">Primer paràgraf</h3>
+        <p>
+            Lorem <a href="">ipsum</a>  dolor sit amet consectetur adipisicing elit. <strong class="fondoAmarillo">Natus</strong> fugiat vero aliquam fugit. Consequatur eius pariatur et dolorem fuga fugit corporis, voluptatum dicta iure odio neque eligendi enim ex magnam.
+        </p>
+        <h3>Segon paràgraf</h3>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto ratione perferendis dolorum sint sequi molestiae? Vitae, itaque. Impedit voluptate asperiores veniam tempora dolorem quod quisquam distinctio harum possimus dignissimos? Id.
+        </p>
+        <h3>Tercer paràgraf</h3>
+        <p id="ultimPar">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi animi molestias et voluptate? Culpa, nulla facilis, totam debitis est placeat omnis et alias praesentium aspernatur expedita eos natus inventore consequatur.
+        </p>
+    </main>
+    <footer>
+        <p><small>Copyright 2022</small></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,76 @@
+@charset "utf-8";
+
+*{
+    padding:0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    
+    
+}
+:root{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    background-image: url("../img/fondo.jpg");
+}
+body{
+    width: 80%;
+    margin: 0 auto;
+    background-color: bisque;
+    border-radius: 0 0 2em 2em;
+    box-shadow: 4px 4px 10px lightgray;
+    margin-bottom: 4em;
+    opacity: 0.8;
+}
+/* Capçalera */
+
+header>img{
+    display: block;
+    width: 100%;
+    height: 12rem;
+}
+/* nav i main a dos col·lumnes */
+
+div#tabular{
+    font-size: 0;
+}
+div#tabular nav{
+    display: inline-block;
+    width: 20%;
+    background-color: burlywood;
+    font-size: 1rem;
+    vertical-align: top;
+}
+div#tabular main{
+    display:inline-block;
+    width: 80%;
+    background-color: bisque;
+    font-size: 0.9rem;
+    padding: 2em;
+}
+/* footer */
+footer{
+    background-color: chocolate;
+    padding: 1em;
+    border-radius: 0 0 2em 2em;
+}
+/* botonera */
+nav ul{
+    list-style: none;
+}
+nav ul li a{
+    display: block;
+    width: 80%;
+    margin: 0.5em auto;
+    padding: 0.5em;
+    text-align: center;
+    background-color: chocolate;
+    color: bisque;
+    font-weight: bold;
+    border-radius: 0.4em;
+    transition: all 0.3s ease;
+}
+nav ul li a:hover{
+    color: chocolate;
+    background-color: bisque;
+}

@@ -1,0 +1,42 @@
+/*   Directives CSS  */
+@charset "utf-8";
+
+/* Aci sols el que és exclusiu d'aquesta pàgina 
+No fa falta posar les inicialitzacions ja que estàn 
+carregades per layout.css*/
+
+main article div#marco{
+    float:left; /* float segueix sent util en aquestos casos */
+    position: relative;/* Sense top ni left, per a que siga orige */
+    margin: 1em;
+    opacity: 1;
+}
+/* main article div#marco img{
+    
+    
+} */
+main article div#marco p{
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    color:red;
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+main article p{
+    text-align: justify;
+    margin-bottom: 1em;
+}
+main article p:last-child{
+    clear: both;
+}
+aside#cookies{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color:white;
+    text-align: center;
+    padding: 2em;    
+}

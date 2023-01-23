@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Selectores básicos</title>
+	<meta charset="utf-8">
+	<!-- Mejor tener CSS en hoja externa. Pero para avanzar lo pongo aquí -->
+	<style type="text/css">
+		/* SELECTOR UNIVERSAL */
+		*{
+			margin: 0; padding: 0; /* INICIALIZACIONES */
+			text-decoration: none;
+			box-sizing: border-box;
+		}
+
+		/* SELECTORES DE ELEMENTO */
+		html{
+			font-family: Arial; /* Heredables */
+			font-size: 16px;
+			background-image: url(img/fondo.png);
+		}
+
+		body{
+			padding: 1.5rem;
+			background-color: white;
+			width: 90%;
+		}
+
+		h1 { margin-bottom:1.5rem; 
+			 color: blue; }
+
+		p{ color: darkblue; }
+
+		footer{ padding: 1rem; 
+				border-top: 1px dotted green;   }
+
+		/* SELECTORES DE CLASSE: varios eltos pueden pertenecer a una clase */
+
+		.bordeRojo{
+			border: 1px solid red;
+		}
+
+		/* Esta es más específica */
+		strong.fondoAmarillo{ background-color: orange; }	
+
+		.fondoAmarillo{
+			background-color: yellow;
+		}
+
+		p .bordeRojo{ border: 2px dotted purple; }	
+		/* Todos los elementos de la clase .bR que sean DESCENDENTIENTE de un p */
+
+
+		/* SELECTORES DE ID: vienen a reemplazar los estilos enlinea */
+		h3#tit3a{ text-decoration: underline; }
+		/* h3 es redundante, pero aporta información útil */
+
+		h3#tit3b{ font-style: italic; }
+
+		/* AGRUPACION SELECTORES */
+		/* Coma:  forma compacta */
+		h2, h3{ margin-bottom:1rem; 
+			 color: red; }
+		
+		/* Espacio:  Descendiente */
+		footer small{
+			font-family: "Courier", monospace;
+		}
+
+		/* > : Hijo directo */
+		footer > small{ /* En este caso no cumple propiedad */
+			font-family: "Verdana", sans-serif;
+		}
+
+		/* Pseudoclase :not : Que no cumpla Selector entre paréntesis */
+
+		h3:not(#tit3a){ /* h3 que no tengan id=tit3a */
+			font-style: italic;
+		}
+		p:hover{
+            text-decoration: underline;
+        }
+        main *:hover{
+            background-color: green;
+        }
+
+
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Selectores básicos</h1>
+	</header>
+	<main>
+		<!-- Un elemento puede "heredar" prop's. de varias clases -->
+		<h3 id="tit3a" class="fondoAmarillo bordeRojo">Primer párrafo</h3>
+		<p>Lorem ipsum <a class="bordeRojo" href="http://doctor.es">dolor</a> sit amet, consectetur adipisicing elit, sed do eiusmod	tempor incididunt ut labore et dolore <strong class="fondoAmarillo">magna aliqua</strong>. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat.
+		</p>
+		<h3  id="tit3b" class="bordeRojo">Segundo párrafo</h3>
+		<p> Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		
+		<h3>Tercer párrafo </h3>
+		<p> Lorem.... </p>
+	</main>
+	<footer>
+		<p><small>copyright 2021</small></p>
+	</footer>
+</body>
+</html>

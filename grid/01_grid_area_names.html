@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grid Area</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+        :root{
+            font-size: 16px;
+            background-color: grey;
+            text-align: center;
+        }
+        body{
+            background-color: white;
+            width: 95%;
+            margin: 0 auto;
+            display: grid; /* Per fer-lo regilla */
+            grid-template-columns: 8rem 4fr 1fr;
+            grid-template-rows: 4rem auto auto;
+            grid-template-areas:    "lg hd hd"
+                                    "nv mn bn"
+                                    "nv mn bn"
+                                    "ft ft ft";
+        }
+        header{
+            background-color: red;
+            grid-area: hd;
+        }
+        aside#logo{
+            background-color: blue;
+            grid-area: lg;
+        }
+        nav{
+            background-color: lightblue;
+            grid-area: nv;
+        }
+        main{
+            min-height: 40rem;
+            background-color: lightgreen;
+            grid-area: mn;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            justify-items: center;
+            align-items:center;
+        }
+        main div{
+            background-color: lightcyan;
+            border: 1px solid black;
+            width: 4em;
+            height: 4em;
+        }
+        main div#primer{
+            order:-1;
+        }
+        aside#banner{
+            background-color: lightpink;
+            grid-area: bn;
+        }
+        footer{ 
+            background-color: lightskyblue;
+            grid-area: ft;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Titol</h1>
+    </header>
+    <aside id="logo">
+        <h3>Logo</h3>
+    </aside>
+    <nav>
+        <!-- <ul>
+            <li>sdfsdf</li>
+            <li>sdfasdfas</li>
+            <li>dsjfoisda</li>
+        </ul> -->
+    </nav>
+    <main>
+        <div>
+            <p>1</p>
+        </div>
+        <div>
+            <p>2</p>
+        </div>
+        <div>
+            <p>3</p>
+        </div>
+        <div>
+            <p>4</p>
+        </div>
+        <div>
+            <p>5</p>
+        </div>
+        <div>
+            <p>6</p>
+        </div>
+        <div id="primer">
+            <p>7</p>
+        </div>
+    </main>
+    <aside id="banner">
+        <p>Banners</p>
+    </aside>
+    <footer>
+        <p>copyright 2022</p>
+    </footer>
+    
+</body>
+</html>

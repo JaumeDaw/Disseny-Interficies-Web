@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <header><h1><img src=".\img\grano.gif" alt="icon">Contacto</h1><hr></header>
+    <main>
+        <p>
+            Si deseas ponerte en contacto con nosotros rellena este formulario y te contestaremos a la mayor brevedad posible
+        </p>
+    <form action="" id="contacto">
+        <table>
+            <tr>
+                <th>Nombre*</th>
+                <td><input type="text" name="nom" id="nom" autofocus maxlength="20"></td>
+            </tr>
+            <tr>
+                <td>Apellidos</td>
+                <td><input type="text" name="cog" id="cog" maxlength="20"></td>
+            </tr>
+            <tr>
+                <td>Edat</td>
+                <td><input type="number" name="edat" id="edat" min="18" max="99"></td>
+            </tr>
+            <tr>
+                <th>Correo Electrónico*</th>
+                <td><input type="text" name="email" id="email" maxlength="30" pattern="[\w._%+-]+@[\w.-]+\.[a-zA-Z]{2,4}"></td>
+            </tr>
+        </table>
+        <p>¿Cuantas tazas de café tomas al dia?</p> 
+        <input type="radio" name="taza" id="1o2" value="1o2" checked>
+        <label for="1o2">1 o 2 tazas</label> 
+        <input type="radio" name="taza" id="2-5" value="2-5">
+        <label for="2-5">2 - 5 tazas</label>
+        <input type="radio" name="taza" id="mas" value="mas">
+        <label for="mas">Mas de 5 tazas</label>
+        <p>¿Como te gusta preparar el café?</p>
+        <select name="cafe" id="cafe" multiple>
+            <option value="Arabica">Arabica</option>
+            <option value="Robusta">Robusta</option>
+            <option value="Caracolillo">Caracolillo</option>
+        </select>
+        <p>
+            <p>Comentario</p>
+            <textarea name="coment" id="coment" cols="30" rows="10"></textarea>
+        </p>
+        <label for="sugerencia">¿Como nos has encontrado?</label><br>
+        <input type="text" name="sugerencia" id="sugerencia" list="sugerencias">
+        <datalist id="sugerencias">
+            <option value="Anuncio de televisión">
+            <option value="Amigo">
+            <option value="Buscadores">
+          </datalist>
+        <p><label for="color">Color preferido</label>
+        <input type="color" name="color" id="color">
+        </p>  
+        <p><input type="submit" value="Enviar"><input type="reset" value="Borrar"></p>
+    </form>
+</main>
+    
+    
+</body>
+</html>

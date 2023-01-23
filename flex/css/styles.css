@@ -1,0 +1,131 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+:root{
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: gray;
+}
+body{
+    background-color: white;
+    width: 90%;
+    margin: 0 auto;
+    box-shadow: 3px 3px 3px black;
+    margin-bottom: 2em;
+    padding: 1em;
+}
+
+/* Capçalera */
+
+header h1{
+    font-family: 'Bungee Inline',"Arial", cursive;
+    font-size: 3rem;
+    color:gray;
+    text-align: center;
+    text-shadow: 2px 2px 2px red;
+    letter-spacing: 0.2em;
+}
+header h1:before{
+    content: url('../img/banner.gif');
+}
+
+/* Botonera */
+
+nav ul{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1em;
+    list-style: none;
+}
+
+nav ul li a{
+    width: 10em;
+    display: block;
+    text-align: center;
+    background-color: red;
+    color:white;
+    font-weight: bold;
+    padding: 1em;
+    border-radius: 1em;
+    border:2px solid red;
+    transition: all 0.2s ease;
+}
+
+nav ul li a:hover{
+    border: 2px solid black;
+    background-color: pink;
+    color:red;
+}
+
+/* Text */
+
+main article{
+    column-count: 2;
+    column-gap:2em;
+    text-align: justify;
+    margin: 1em 0;
+}
+
+/* Secció ventes */
+
+main section#ventas{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+main section#ventas div.item{
+    border: 5px double blue;
+    padding: 1em;
+    margin: 1em 0;
+    text-align: center;
+}
+main section#ventas div.item img{
+    width: calc(200em/16);
+}
+main section#ventas div.item input[type='button']{
+    width: calc(170em/16);
+    padding: 0.5em;
+}
+
+/* Footer */
+
+footer{
+    border-top: 1px solid grey;
+    padding: 1em;
+}
+
+@media(max-width: 768px){
+    body{
+        width: 100%;
+    }
+    nav ul{
+        flex-flow: column;
+    }
+    nav ul a{
+        margin:0.5em;
+        border:2px solid red;
+        transition: all 0.2s ease;
+    }
+    nav ul li a:hover{
+        border: 2px solid black;
+        background-color: pink;
+        color:red;
+    }
+    main article{
+        column-count: 1;
+    }
+    header h1{
+        font-size: 2em;
+    }
+    header h1::before{
+        content:'';
+    }
+}

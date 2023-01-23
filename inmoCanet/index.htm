@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Inmobiliaria Canet</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div id="logo"><img src="./img/logo.png" alt="logo" /></div>
+      <div id="banderas">
+        <p><img src="./img/bandera_esp.png" alt="esp" /></p>
+        <p><img src="./img/bandera_ing.png" alt="img" /></p>
+        <p><img src="./img/bandera_fra.png" alt="fra" /></p>
+        <p><img src="./img/bandera_ale.png" alt="ale" /></p>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>HOME</li>
+        <li>VENTA</li>
+        <li>ALQUILER</li>
+        <li>CONTACTO</li>
+      </ul>
+      <div id="buscar">
+        <input type="text" />
+        <button>Buscar</button>
+      </div>
+    </nav>
+    <main>
+      <section id="ficha">
+        <h3>Parcela Urbana en Miramar</h3>
+        <div id="info">
+          <p>Ref: P333555A</p>
+          <p>+Info:</p>
+        </div>
+        <div id="foto"><img src="./img/Parcela1.jpg" alt="parcela" /></div>
+        <div id="redes">
+          <p><img src="./img/facebook.png" alt="face" /></p>
+          <p><img src="./img/twitter.png" alt="twit" /></p>
+          <p><img src="./img/instagram.png" alt="insta" /></p>
+        </div>
+      </section>
+      <section id="contacto">
+        <p>Envia email a <a href="#">info@inmcan.eu</a></p>
+        <p>O rellena este Formulario:</p>
+        <form action="procesa.php">
+          <p>
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre" />
+          </p>
+          <p>
+            <label for="email">E-mail:</label>
+            <input type="email" name="emal" id="email" />
+          </p>
+          <p>
+            <label for="mensaje">Mensaje:</label>
+            <textarea
+              name="mensaje"
+              id="mensaje"
+              cols="30"
+              rows="10"
+              placeholder="En el mensaje cita la referencia del inmueble"
+            ></textarea>
+          </p>
+          <p>
+            <input type="checkbox" name="privacidad" id="privacidad" />
+            <label for="privacidad">Si, acepto la política de privacidad</label>
+          </p>
+
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

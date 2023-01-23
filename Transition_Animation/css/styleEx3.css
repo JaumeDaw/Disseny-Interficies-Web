@@ -1,0 +1,57 @@
+section.pong{
+    min-height: 20vh;
+    width: 40%;
+    height: 20rem;
+    margin: 5rem auto;
+    background-color: #031321;
+    border-radius: 15px;
+    
+}
+section.pong div.line{
+    
+    position:relative;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100px;
+    height: 100px;
+    background: transparent;
+    border-bottom: 4px solid #2196f3;
+    animation: animate 2s linear infinite;
+}
+@keyframes animate {
+    0%{
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%,-50%) rotate(360deg);
+    }
+}
+section.pong div.dot{
+    position:relative;
+    top:30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #2196f3;
+    animation: bounce 2s linear infinite;
+}
+
+@keyframes bounce {
+    0%{
+        top: calc(30% + 15px);
+        box-shadow: 0 3px 4px #2196f3;
+    }
+    25%{
+        top: calc(20% - 110px);
+    }
+    50%{
+        top: calc(20% - 55px);
+    }
+    75%{
+        top: calc(20% - 100px);
+        box-shadow: 0 -3px 4px #2196f3;
+    }
+}
