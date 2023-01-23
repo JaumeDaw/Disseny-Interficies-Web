@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        scroll-behavior: smooth;
+      }
+      :root {
+        font-size: 16px;
+      }
+      main article.scroll{
+        /*Container que conté les seccións*/
+        scroll-snap-type: y proximity; /*Com es comporten les seccións que es troben dins*/
+        height: 25rem;
+        overflow: auto;
+      }
+      main section {
+        min-height: 20rem;
+        scroll-snap-align: start;
+      }
+      main section:nth-child(odd) {
+        background-color: lightgray;
+      }
+      main section:nth-child(even) {
+        background-color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <header><h1>Cabecera</h1></header>
+    <nav>
+      <ul>
+        <li><a href="#s1">Sección 1</a></li>
+        <li><a href="#s2">Sección 2</a></li>
+        <li><a href="#s3">Sección 3</a></li>
+        <li><a href="#s4">Sección 4</a></li>
+        <li><a href="#s5">Sección 5</a></li>
+      </ul>
+    </nav>
+    <main>
+      <article class="scroll">
+        <section id="s1"><h3>Sección 1</h3></section>
+        <section id="s2"><h3>Sección 2</h3></section>
+        <section id="s3"><h3>Sección 3</h3></section>
+        <section id="s4"><h3>Sección 4</h3></section>
+        <section id="s5"><h3>Sección 5</h3></section>
+      </article>
+        <p><a href="#">Ir arriba</a></p>
+      
+    </main>
+  </body>
+</html>

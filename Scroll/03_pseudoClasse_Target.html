@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        scroll-behavior: smooth;
+      }
+      :root {
+        font-size: 16px;
+      }
+      main section {
+        min-height: 20rem;
+      }
+      main section:nth-child(odd) {
+        background-color: lightgray;
+      }
+      main section:nth-child(even) {
+        background-color: gray;
+      }
+      main section:target{
+        border-left: 2rem solid black;
+      }
+      main section:target h3{
+        color: yellowgreen;
+        text-shadow: 2px 1px 1px black;
+      }
+    </style>
+  </head>
+  <body>
+    <header><h1>Cabecera</h1></header>
+    <nav>
+      <ul>
+        <li><a href="#s1">Sección 1</a></li>
+        <li><a href="#s2">Sección 2</a></li>
+        <li><a href="#s3">Sección 3</a></li>
+        <li><a href="#s4">Sección 4</a></li>
+        <li><a href="#s5">Sección 5</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section id="s1"><h3>Sección 1</h3></section>
+      <section id="s2"><h3>Sección 2</h3></section>
+      <section id="s3"><h3>Sección 3</h3></section>
+      <section id="s4"><h3>Sección 4</h3></section>
+      <section id="s5"><h3>Sección 5</h3></section>
+    </main>
+  </body>
+</html>
