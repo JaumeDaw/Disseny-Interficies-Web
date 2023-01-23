@@ -14,46 +14,108 @@
       }
       :root {
         font-family: "Times New Roman", serif;
-        font-size: 1.25vw;
+        font-size: 2vh;
       }
       header,
       nav,
       article,
       footer {
         border: 2px solid white;
-        text-align: center;
         padding: 1rem 0;
       }
-      header#principal{
+      article {
+        padding: 1rem 1rem;
+      }
+      header#principal {
         background-color: green;
         text-transform: uppercase;
       }
-      nav{
+      nav {
         background-color: red;
       }
-      header:not(#principal), footer{
+      header:not(#principal),
+      footer {
         background-color: orange;
       }
-      section#noticias article{
+      section#noticias article {
         background-color: aqua;
       }
-      section#articulos article{
+      section#articulos article {
         background-color: blue;
       }
       /* ******************* */
       /* === VISTA MOVIL === */
       /* ******************* */
-      body{
-        display:grid;
+      body {
+        display: grid;
         grid-template-columns: 1fr;
-        grid-template-areas:    "hd"
-                                "cs"
-                                "nt"
-                                "at"
-                                "ft";
+        grid-template-areas:
+          "hd"
+          "mn"
+          "ft";
+        height: 100vh;
       }
-      header#principal{
+      header#principal {
         grid-area: hd;
+      }
+      nav {
+        display: none;
+        grid-area: nv;
+        padding: 2vh 10vh;
+      }
+      main {
+        grid-area: mn;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "hed"
+          "not"
+          "art";
+      }
+      main header {
+        grid-area: hed;
+      }
+      section#noticias {
+        grid-area: not;
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+      section#articulos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-area: art;
+      }
+      footer {
+        grid-area: ft;
+      }
+      /* ******************** */
+      /* === VISTA TABLET === */
+      /* ******************** */
+      @media (min-width: 768px) {
+        body {
+          grid-template-columns: 1fr 5fr;
+          grid-template-areas:
+            "hd hd"
+            "nv mn"
+            "ft ft";
+        }
+        nav {
+          display: block;
+        }
+        section#articulos {
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+      }
+      /* *********************** */
+      /* === VISTA ORDENADOR === */
+      /* *********************** */
+      @media (min-width: 992px) {
+        section#noticias {
+          grid-template-columns: 1fr 1fr;
+        }
+        section#articulos {
+          grid-template-columns: repeat(6, 1fr);
+        }
       }
     </style>
   </head>
@@ -70,9 +132,7 @@
       </ul>
     </nav>
     <main>
-      <header>
-        <p>Cabecera de Sección</p>
-      </header>
+      <header><h3>Cabecera de la sección</h3></header>
       <section id="noticias">
         <article id="no1">
           <h3>Noticia 1</h3>
