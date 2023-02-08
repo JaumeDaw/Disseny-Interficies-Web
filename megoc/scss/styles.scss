@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 16px;
+}
+body {
+  background-color: black;
+}
+header {
+  background-image: url("/img/Logo.png");
+  background-size: 350px;
+  height: 165px;
+}
+nav#movil {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  width: 100%;
+
+  select {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    padding: 0 1rem 0 0;
+    margin: 0;
+    width: 100%;
+    &::-ms-expand {
+      display: none;
+    }
+
+    // Remove focus outline, will add on alternate element
+    outline: none;
+  }
+}

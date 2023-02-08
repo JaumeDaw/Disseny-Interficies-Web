@@ -1,0 +1,27 @@
+$margin : 0.5rem;
+$padding: 0.5rem;
+$back: "background";
+$backColor: #5E5E5E;
+$f :"font";
+
+header{
+    margin: $margin;
+    padding: $padding;
+    #{$back}-image: url("./img/f1.png");
+    #{$back}-repeat: no-repeat;
+    #{$back}-color: "none";
+
+    section{
+        margin: $margin;
+        padding: $padding;
+        *{
+            display:inline-block;
+            #{$back}-color:$backColor;
+        }
+        h1{
+            #{$f}-family: Arial;
+            #{$f}-size: 1.2rem;
+            #{$f}-style:italic;
+        }
+    }
+}

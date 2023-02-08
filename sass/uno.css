@@ -1,0 +1,20 @@
+header {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  background-image: url("./img/f1.png");
+  background-repeat: no-repeat;
+  background-color: "none";
+}
+header section {
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+header section * {
+  display: inline-block;
+  background-color: #5E5E5E;
+}
+header section h1 {
+  font-family: Arial;
+  font-size: 1.2rem;
+  font-style: italic;
+}/*# sourceMappingURL=uno.css.map */

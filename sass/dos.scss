@@ -1,0 +1,33 @@
+$t: "text";
+$f: "font";
+$b: "background-color";
+$colorA: #5e5e5e;
+$separator: 0.5rem;
+$backColor : #F9F9F9;
+
+nav ul {
+  list-style: none;
+  li {
+    #{$t}: {
+      align: center;
+    }
+    display: inline-block;
+    a {
+      #{$f}: {
+        family: Georgia;
+        weight: bold;
+      }
+      #{$t}: {
+        decoration: none;
+      }
+      display: block;
+      #{$b}: $colorA;
+      margin: $separator;
+      padding: $separator;
+      :hover{
+        color: $colorA;
+        #{$b}: $backColor;
+      }
+    }
+  }
+}
